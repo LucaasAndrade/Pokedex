@@ -1,0 +1,16 @@
+<div class="pokemon-list">
+    <a [routerLink]="['details', pokemon.status.id]" class="pokemon-card" *ngFor="let pokemon of pokemons">
+        <div class="pokemon-card__image">
+            <img [src]="pokemon.status.sprites.front_default" [alt]="pokemon.name">
+        </div>
+        <div class="pokemon-card__info">
+            <span class="pokemon-card__id">#{{ pokemon.status.id }}</span>
+            <h3 class="pokemon-card__name">{{ pokemon.name }}</h3>
+        </div>
+    </a>
+</div>
+
+<div class="pagination">
+    <button (click)="previousPage()" [disabled]="offset === 0">Anterior</button>
+    <button (click)="nextPage()">Próximo</button>
+</div>

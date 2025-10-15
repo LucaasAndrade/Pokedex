@@ -1,0 +1,46 @@
+<div class="pokemon-details">
+    <div class="pokemon-details__loading" *ngIf="!isLoading">
+        <p>Loading...</p>
+    </div>
+
+    <div class="pokemon-details__error" *ngIf="apiError">
+        <p>Error loading Pokémon details.</p>
+    </div>
+
+    <div class="pokemon-details__content" *ngIf="isLoading">
+        <div class="pokemon-details__header">
+            <h1 class="pokemon-details__name">{{ pokemon[0].name }}</h1>
+            <span class="pokemon-details__id">#{{ pokemon[0].id }}</span>
+        </div>
+
+        <div class="pokemon-details__main">
+            <div class="pokemon-details__image">
+                <img [src]="pokemon[0].sprites.other['official-artwork'].front_default" [alt]="pokemon[0].name">
+            </div>
+
+            <div class="pokemon-details__info">
+                <div class="pokemon-details__types">
+                    <h2>Types</h2>
+                    <ul>
+                        <li *ngFor="let type of pokemon[0].types">{{ type.type.name }}</li>
+                    </ul>
+                </div>
+
+                <div class="pokemon-details__stats">
+                    <h2>Stats</h2>
+                    <ul>
+                        <li *ngFor="let stat of pokemon[0].stats">
+                            {{ stat.stat.name }}: {{ stat.base_stat }}
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="pokemon-details__misc">
+                    <h2>Information</h2>
+                    <p>Height: {{ pokemon[0].height / 10 }} m</p>
+                    <p>Weight: {{ pokemon[0].weight / 10 }} kg</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

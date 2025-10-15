@@ -1,0 +1,11 @@
+.filter-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 20px;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

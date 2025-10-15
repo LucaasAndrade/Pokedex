@@ -1,0 +1,11 @@
+<app-search (emmitSearch)="search($event)" (emmitClear)="clearSearch()"></app-search>
+
+<div class="filter-container">
+  <select #typeFilter (change)="filterByType(typeFilter.value)">
+    <option value="all">All Types</option>
+    <option *ngFor="let type of pokemonTypes" [value]="type.name">{{ type.name }}</option>
+  </select>
+  <button (click)="clearSearch()">Limpar Filtro</button>
+</div>
+
+<app-list></app-list>
