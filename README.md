@@ -1,59 +1,53 @@
-# Pokedex
+# Pokedex Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.17.
+Este é um projeto de uma Pokedex desenvolvido com Angular, que consome a [PokeAPI](https://pokeapi.co/) para exibir informações sobre Pokémon.
 
-## Development server
+## Funcionalidades
 
-To start a local development server, run:
+- Listagem de Pokémon com paginação (20 por página).
+- Busca de Pokémon por nome.
+- Filtragem de Pokémon por tipo.
+- Limpeza de filtros de busca e tipo.
+- Visualização de detalhes de cada Pokémon.
 
-```bash
-ng serve
-```
+## Tecnologias Utilizadas
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- [Angular](https://angular.io/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [RxJS](https://rxjs.dev/)
+- [PokeAPI](https://pokeapi.co/)
 
-## Code scaffolding
+## Estrutura do Projeto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+O projeto está organizado da seguinte forma:
 
-```bash
-ng generate component component-name
-```
+- `src/app/components`: Contém os componentes reutilizáveis da aplicação, como o cabeçalho, a lista de Pokémon e a barra de busca.
+- `src/app/pages`: Contém as páginas da aplicação, como a página inicial e a página de detalhes de um Pokémon.
+- `src/app/services`: Contém os serviços responsáveis pela comunicação com a PokeAPI.
+- `src/app/model`: Contém os modelos de dados da aplicação.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Como Executar o Projeto
 
-```bash
-ng generate --help
-```
+Para executar o projeto em sua máquina local, siga os passos abaixo:
 
-## Building
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/pokedex-angular.git
+   ```
 
-To build the project run:
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
 
-```bash
-ng build
-```
+3. **Execute o servidor de desenvolvimento:**
+   ```bash
+   ng serve
+   ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+4. **Acesse a aplicação:**
+   Abra seu navegador e acesse `http://localhost:4200/`.
 
-## Running unit tests
+## Boas Práticas
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+O projeto segue as boas práticas de desenvolvimento com Angular, como a utilização de componentes, serviços e modelos, além de uma estrutura de pastas organizada e clara.
